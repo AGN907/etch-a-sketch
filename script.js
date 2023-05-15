@@ -12,3 +12,10 @@ for (let i=0; i < gridSize * gridSize; i++) {
         
     }
     
+
+
+const divs = document.querySelectorAll('.square')
+
+divs.forEach(item => item.addEventListener('mouseover', e => {
+    e.target.classList.add('black') 
+}, {capture: true}))
