@@ -4,5 +4,11 @@ body {
 
 
 .container{
+    display: flex;
     max-width: 900px;
+}
+
+.square{
+    flex: 1 0 auto;
+    border: 1px solid black;
 }
