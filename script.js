@@ -45,6 +45,12 @@ function hoverStyling() {
 
 }
 
+function removeGrid() {
+    let cells = document.querySelectorAll('.cell')
+    cells.forEach(item => container.removeChild(item))
+}
+
+
 
 
 
@@ -53,11 +59,14 @@ const container = document.querySelector('.container')
 const gridRange = document.querySelector('#grid-count')
 
 
-
 createGrids(gridRange.value)
 
 
+gridRange.addEventListener('change', e => {
 
+    removeGrid()
+    createGrids(gridRange.value)
+})
 
 
 
