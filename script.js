@@ -57,6 +57,21 @@ function removeBackgroundColor() {
 }
 
 
+function randomColor() {
+    let red = Math.floor(Math.random() * 255) + 1
+    let green = Math.floor(Math.random() * 255) + 1
+    let blue = Math.floor(Math.random() * 255) + 1
+
+    let randomColor = `rgb(${red},${green},${blue})`
+    return randomColor
+
+}
+
+function randomizeCellsBackground() {
+    const cells = document.querySelectorAll('.cell')
+    cells.forEach(item => item.style.backgroundColor = randomColor())
+}
+
 
 
 
@@ -64,7 +79,8 @@ function removeBackgroundColor() {
 const container = document.querySelector('.container')
 const gridRange = document.querySelector('#grid-count')
 
-
+const randomize = document.querySelector('#randomize')
+randomize.addEventListener('click', randomizeCellsBackground)
 
 
 createGrids(gridRange.value)
