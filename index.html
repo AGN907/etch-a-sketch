@@ -5,11 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-a-Sketch</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js" defer></script>
 </head>
 <body>
+    <h1>Etch-a-Sketch</h1>
+    <div class="grid-settings">
+        <div class="above">
+            
+            <button id="restart">Restart</button>
+            <button id="randomize">Randomize</button>
+        </div>
+
+        <div class="below">
+            
+            <div>
+                <label for="cell-color">Color:</label>
+                <input id="cell-color" value="black" type="color">
+            </div>
+
+            <div>
+                <label for="rgb">RGB:</label>
+                <input id="rgb" type="checkbox">
+            </div>
+            
+            <div>
+                <label for="grid-count">Grid count:</label>
+                <input id="grid-count" value="16" type="range" min="16" max="100">
+            </div>
+            
+            
+            <span id="grid-total"></span>
+        </div>
+    </div>
     <div class="container">
 
     </div>
+
     
 </body>
 </html>
