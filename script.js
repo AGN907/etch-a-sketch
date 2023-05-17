@@ -51,12 +51,20 @@ function removeGrid() {
 }
 
 
+function removeBackgroundColor() {
+    let cells = document.querySelectorAll('.cell')
+    cells.forEach(cell => cell.style.backgroundColor = '')
+}
+
+
 
 
 
 
 const container = document.querySelector('.container')
 const gridRange = document.querySelector('#grid-count')
+
+
 
 
 createGrids(gridRange.value)
